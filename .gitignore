@@ -1,0 +1,10 @@
+*.db
+*.opendb
+*.vcxproj
+*.filters
+*.user
+
+Debug/
+Realease/
+ipch/
+obj/
