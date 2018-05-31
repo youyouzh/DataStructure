@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "CppUnitTest.h"
 #include "../DataStructure/u_sort.h"
 
@@ -12,7 +12,7 @@ namespace DataStructureUnitTest
 
 		TEST_METHOD(selectionSortTest)
 		{
-			// TODO: ÔÚ´ËÊäÈë²âÊÔ´úÂë
+			// TODO: åœ¨æ­¤è¾“å…¥æµ‹è¯•ä»£ç 
 			int input[] = { 2, 6, 3, 10, 5 };
 			int expect[] = { 2, 3, 5, 6, 10 };
 			int actual[5] = { 0 };
