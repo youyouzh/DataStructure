@@ -1,4 +1,4 @@
-// linked binary tree using nodes of type binaryTreeNode
+ï»¿// linked binary tree using nodes of type binaryTreeNode
 // derives from the abstract class binaryTree
 
 #pragma once
@@ -338,7 +338,7 @@ template <class T>
 void LinkedBinaryTree<T>::dispose(BinaryTreeNode<T>* node)
 {
 	delete node;
-	// É¾³ıÖ¸Õë£¬±ÜÃâÒ°Ö¸Õë
+	// åˆ é™¤æŒ‡é’ˆï¼Œé¿å…é‡æŒ‡é’ˆ
 	node = nullptr;
 }
 

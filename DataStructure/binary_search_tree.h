@@ -1,4 +1,4 @@
-// linked binary tree implementation of a binary search tree
+ï»¿// linked binary tree implementation of a binary search tree
 // implements all dictionary and bsTree methods
 
 #pragma once
@@ -14,7 +14,7 @@ public:
 	typedef std::pair<K, E> Pair;
 	typedef LinkedBinaryTree<Pair> LBT;
 
-	// ÊµÏÖ Dictionary µÄ·½·¨
+	// å®ç° Dictionary çš„æ–¹æ³•
 	bool empty() const override;
 	int size() const override;
 	void insert(const Pair& pair) override;
@@ -23,7 +23,7 @@ public:
 
 	BinaryTreeNode<Pair>* find_node(const K& key) const;
 
-	// °´¼üÉıĞòÅÅÁĞµÄÊä³ö
+	// æŒ‰é”®å‡åºæ’åˆ—çš„è¾“å‡º
 	void ascend();
 };
 
@@ -49,70 +49,70 @@ std::pair<K, E>* BinarySearchTree<K, E>::find(const K& key) const
 template <class K, class E>
 BinaryTreeNode<std::pair<K, E>>* BinarySearchTree<K, E>::find_node(const K& key) const
 {
-	// ¶ş²æÊ÷ËÑË÷
+	// äºŒå‰æ ‘æœç´¢
 	BinaryTreeNode<Pair> *find_node = LBT::root;
 	while (find_node != nullptr)
 	{
-		// ¼ì²éÔªËØ
+		// æ£€æŸ¥å…ƒç´ 
 		if (key < find_node->element.first)
-		{ // Ğ¡ÓÚÔòÍù×óº¢×Ó²éÕÒ
+		{ // å°äºåˆ™å¾€å·¦å­©å­æŸ¥æ‰¾
 			find_node = find_node->left_child;
 		}
 		else if (key > find_node->element.first)
-		{ // ´óÓÚÔòÍùÓÒº¢×Ó²éÕÒ
+		{ // å¤§äºåˆ™å¾€å³å­©å­æŸ¥æ‰¾
 			find_node = find_node->right_child;
 		}
 		else
-		{ // ÏàµÈÔòÕÒµ½
+		{ // ç›¸ç­‰åˆ™æ‰¾åˆ°
 			return find_node;
 		}
 	}
 
-	// ÎŞÆ¥Åä¶Ô
+	// æ— åŒ¹é…å¯¹
 	return nullptr;
 }
 
 
 template <class K, class E>
 void BinarySearchTree<K, E>::insert(const Pair& pair)
-{ // ²åÈëpair£¬Èç¹û´æÔÚÓëÆä¹Ø¼ü×ÖÏàÍ¬£¬Ôò¸²¸Ç
-	// Ê×ÏÈÑ°ÕÒ²åÈëÎ»ÖÃ
-	BinaryTreeNode<Pair> *find_node = LBT::root;  // ²éÕÒÖ¸Õë
-	BinaryTreeNode<Pair> *find_parent_node = nullptr; // ²éÕÒÖ¸ÕëµÄ¸¸½ÚµãÖ¸Õë
+{ // æ’å…¥pairï¼Œå¦‚æœå­˜åœ¨ä¸å…¶å…³é”®å­—ç›¸åŒï¼Œåˆ™è¦†ç›–
+	// é¦–å…ˆå¯»æ‰¾æ’å…¥ä½ç½®
+	BinaryTreeNode<Pair> *find_node = LBT::root;  // æŸ¥æ‰¾æŒ‡é’ˆ
+	BinaryTreeNode<Pair> *find_parent_node = nullptr; // æŸ¥æ‰¾æŒ‡é’ˆçš„çˆ¶èŠ‚ç‚¹æŒ‡é’ˆ
 
 	while(find_node != nullptr)
 	{
 		find_parent_node = find_node;
-		// ²éÕÒÔªËØ
+		// æŸ¥æ‰¾å…ƒç´ 
 		if (pair.first < find_node->element.first)
-		{ // Ğ¡ÓÚÔòÍù×óº¢×Ó²éÕÒ
+		{ // å°äºåˆ™å¾€å·¦å­©å­æŸ¥æ‰¾
 			find_node = find_node->left_child;
 		}
 		else if (pair.first > find_node->element.first)
-		{ // ´óÓÚÔòÍùÓÒº¢×Ó²éÕÒ
+		{ // å¤§äºåˆ™å¾€å³å­©å­æŸ¥æ‰¾
 			find_node = find_node->right_child;
 		}
 		else
-		{ // ¸²¸Ç¾ÉÖµ
+		{ // è¦†ç›–æ—§å€¼
 			find_node->element.second = pair.second;
 			return;
 		}
 	}
 
-	// Îªpair½¨Á¢Ò»¸öĞÂ½Úµã
+	// ä¸ºpairå»ºç«‹ä¸€ä¸ªæ–°èŠ‚ç‚¹
 	auto *new_node = new BinaryTreeNode<Pair>(pair);
 	if (LBT::root == nullptr)
-	{ // Ê÷Îª¿Õ
+	{ // æ ‘ä¸ºç©º
 		LBT::root = new_node;
 	}
 	else
 	{
 		if (pair.first < find_parent_node->element.first)
-		{ // Ğ¡Öµ²åÈëÎª×óº¢×Ó
+		{ // å°å€¼æ’å…¥ä¸ºå·¦å­©å­
 			find_parent_node->left_child = new_node;
 		}
 		else
-		{ // ´óÖµ²åÈëÎªÓÒº¢×Ó
+		{ // å¤§å€¼æ’å…¥ä¸ºå³å­©å­
 			find_parent_node->right_child = new_node;
 		}
 	}
@@ -120,10 +120,10 @@ void BinarySearchTree<K, E>::insert(const Pair& pair)
 
 template <class K, class E>
 void BinarySearchTree<K, E>::erase(const K& key)
-{ // É¾³ı¹Ø¼ü×ÖÎªkeyµÄÊı¶Ô
-	// Ê×ÏÈ²éÕÒ¹Ø¼ü×ÖÎªkeyµÄ½Úµã
-	BinaryTreeNode<Pair> *find_node = LBT::root; // ²éÕÒÖ¸Õë
-	BinaryTreeNode<Pair> *find_parent_node = nullptr;  // ²éÕÒÖ¸ÕëµÄ¸¸½ÚµãÖ¸Õë
+{ // åˆ é™¤å…³é”®å­—ä¸ºkeyçš„æ•°å¯¹
+	// é¦–å…ˆæŸ¥æ‰¾å…³é”®å­—ä¸ºkeyçš„èŠ‚ç‚¹
+	BinaryTreeNode<Pair> *find_node = LBT::root; // æŸ¥æ‰¾æŒ‡é’ˆ
+	BinaryTreeNode<Pair> *find_parent_node = nullptr;  // æŸ¥æ‰¾æŒ‡é’ˆçš„çˆ¶èŠ‚ç‚¹æŒ‡é’ˆ
 	while (find_node != nullptr && find_node->element.first != key)
 	{
 		find_parent_node = find_node;
@@ -137,52 +137,52 @@ void BinarySearchTree<K, E>::erase(const K& key)
 		}
 	}
 
-	// Èç¹ûÃ»ÓĞÕÒµ½Ïà·û½Úµã£¬Ôò·µ»Ø
+	// å¦‚æœæ²¡æœ‰æ‰¾åˆ°ç›¸ç¬¦èŠ‚ç‚¹ï¼Œåˆ™è¿”å›
 	if (find_node == nullptr)
 	{
 		return;
 	}
 
-	// µ±É¾³ıµÄ½ÚµãÓĞÁ½¸öº¢×Ó½ÚµãÊ±£¬×ª»¯ÎªÉ¾³ıµ¥º¢×Ó½Úµã»òÕßÒ¶×Ó½Úµã
+	// å½“åˆ é™¤çš„èŠ‚ç‚¹æœ‰ä¸¤ä¸ªå­©å­èŠ‚ç‚¹æ—¶ï¼Œè½¬åŒ–ä¸ºåˆ é™¤å•å­©å­èŠ‚ç‚¹æˆ–è€…å¶å­èŠ‚ç‚¹
 	if (find_node->left_child != nullptr && find_node->right_child != nullptr)
 	{
-		// ÔÚµ±Ç°½ÚµãµÄ×ó×ÓÊ÷ÖĞÑ°ÕÒ×î´óÔªËØ½Úµã
+		// åœ¨å½“å‰èŠ‚ç‚¹çš„å·¦å­æ ‘ä¸­å¯»æ‰¾æœ€å¤§å…ƒç´ èŠ‚ç‚¹
 		BinaryTreeNode<Pair> *left_subtree_max_node = find_node->left_child;
 		BinaryTreeNode<Pair> *left_subtree_max_parent_node = find_node;
 
-		// Ë³×ÅÓÒº¢×ÓËÑË÷×î´óÖµ
+		// é¡ºç€å³å­©å­æœç´¢æœ€å¤§å€¼
 		while (left_subtree_max_node->right_child != nullptr)
 		{
 			left_subtree_max_parent_node = left_subtree_max_node;
 			left_subtree_max_node = left_subtree_max_node->right_child;
 		}
 
-		// ½«×î´óÔªËØÒÆ¶¯µ½É¾³ıµÄ½Úµãfind_pointer
-		// ²»ÄÜÊ¹ÓÃ£ºfind_pointer->element = max_pointer->element; keyÎª³£Á¿Ê±»áÊ§Ğ§
+		// å°†æœ€å¤§å…ƒç´ ç§»åŠ¨åˆ°åˆ é™¤çš„èŠ‚ç‚¹find_pointer
+		// ä¸èƒ½ä½¿ç”¨ï¼šfind_pointer->element = max_pointer->element; keyä¸ºå¸¸é‡æ—¶ä¼šå¤±æ•ˆ
 		auto *move_subtree = new BinaryTreeNode<Pair>(left_subtree_max_node->element,
 			find_node->left_child,
 			find_node->right_child);
 		
 		if (find_parent_node == nullptr)
-		{ // Èç¹ûÉ¾³ı½ÚµãÎª¸ù½Úµã
+		{ // å¦‚æœåˆ é™¤èŠ‚ç‚¹ä¸ºæ ¹èŠ‚ç‚¹
 			LBT::root = move_subtree;
 		}
 		else if (find_node == find_parent_node->left_child)
-		{ // É¾³ı½ÚµãÎªÆä¸¸½Úµã×óº¢×Ó
+		{ // åˆ é™¤èŠ‚ç‚¹ä¸ºå…¶çˆ¶èŠ‚ç‚¹å·¦å­©å­
 			find_parent_node->left_child = move_subtree;
 		}
 		else
-		{ // É¾³ı½ÚµãÎªÆä¸¸½ÚµãÓÒº¢×Ó
+		{ // åˆ é™¤èŠ‚ç‚¹ä¸ºå…¶çˆ¶èŠ‚ç‚¹å³å­©å­
 			find_parent_node->right_child = move_subtree;
 		}
 
-		// ×ª»¯ÎªÉ¾³ıÒ»¸öµ¥º¢×Ó½Úµã»òÕßÒ¶×Ó½Úµã
+		// è½¬åŒ–ä¸ºåˆ é™¤ä¸€ä¸ªå•å­©å­èŠ‚ç‚¹æˆ–è€…å¶å­èŠ‚ç‚¹
 		if (left_subtree_max_parent_node == find_node)
-		{ // find_node×ó×ÓÊ÷µÄµÚÒ»¸öº¢×Ó½ÚµãÎª×î´óÖµ£¬É¾³ıµ¥º¢×Ó½Úµã
+		{ // find_nodeå·¦å­æ ‘çš„ç¬¬ä¸€ä¸ªå­©å­èŠ‚ç‚¹ä¸ºæœ€å¤§å€¼ï¼Œåˆ é™¤å•å­©å­èŠ‚ç‚¹
 			find_parent_node = move_subtree;
 		}
 		else
-		{ // Ò¶×Ó½ÚµãÎª×î´óÖµ£¬É¾³ıÒ¶×Ó½Úµã
+		{ // å¶å­èŠ‚ç‚¹ä¸ºæœ€å¤§å€¼ï¼Œåˆ é™¤å¶å­èŠ‚ç‚¹
 			find_parent_node = left_subtree_max_parent_node;
 		}
 
@@ -190,29 +190,29 @@ void BinarySearchTree<K, E>::erase(const K& key)
 		find_node = left_subtree_max_node;
 	}
 
-	// É¾³ı½Úµã£¬ÖØĞÂ×éÖ¯Ê÷½á¹¹£¬Ê¹µÃÊ÷Îª¶ş²æËÑË÷Ê÷
-	// find_node×î¶àÖ»ÓĞÒ»¸öº¢×Ó
-	BinaryTreeNode<Pair> *child_node = nullptr;  // º¢×Ó½ÚµãÖ¸Õë
+	// åˆ é™¤èŠ‚ç‚¹ï¼Œé‡æ–°ç»„ç»‡æ ‘ç»“æ„ï¼Œä½¿å¾—æ ‘ä¸ºäºŒå‰æœç´¢æ ‘
+	// find_nodeæœ€å¤šåªæœ‰ä¸€ä¸ªå­©å­
+	BinaryTreeNode<Pair> *child_node = nullptr;  // å­©å­èŠ‚ç‚¹æŒ‡é’ˆ
 	if (find_node->left_child != nullptr)
-	{ // ×óº¢×Ó
+	{ // å·¦å­©å­
 		child_node = find_node->left_child;
 	}
 	else
-	{ // ÓÒº¢×Ó»òÕßÎª¿Õ
+	{ // å³å­©å­æˆ–è€…ä¸ºç©º
 		child_node = find_node->right_child;
 	}
 
-	// É¾³ıfind_node
+	// åˆ é™¤find_node
 	if (find_node == LBT::root)
-	{ // É¾³ı¸ù½Úµã
+	{ // åˆ é™¤æ ¹èŠ‚ç‚¹
 		LBT::root = child_node;
 	}
 	else if (find_node == find_parent_node->left_child)
-	{ // É¾³ı×óº¢×Ó½Úµã
+	{ // åˆ é™¤å·¦å­©å­èŠ‚ç‚¹
 		find_parent_node->left_child = child_node;
 	}
 	else
-	{ // É¾³ıÓÒº¢×Ó½Úµã
+	{ // åˆ é™¤å³å­©å­èŠ‚ç‚¹
 		find_parent_node->right_child = child_node;
 	}
 
