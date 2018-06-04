@@ -1,4 +1,4 @@
-// abstract class stack
+﻿// abstract class stack
 // abstract data type specification for stack data structure
 // all methods are pure virtual functions
 
@@ -9,18 +9,18 @@ class Stack
 {
 public:
 	virtual ~Stack() {}
-	// return true if stack is empty
+	// 如果栈为空则返回true
 	virtual bool empty() const = 0;
 
-	// return number of elements in stack
+	// 返回栈中的元素个数
 	virtual int size() const = 0;
 
-	// return reference to the top element
+	// 返回栈顶元素
 	virtual T& top() = 0;
 
-	// remove the top element
+	// 删除栈顶元素（出栈）
 	virtual void pop() = 0;
 
-	// insert theElement at the top of the stack
+	// 往栈顶插入元素（入栈）
 	virtual void push(const T& element) = 0;
 };

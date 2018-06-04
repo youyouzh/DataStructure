@@ -1,4 +1,4 @@
-// abstract class queue
+﻿// abstract class queue
 // abstract data type specification for queue data structure
 // all methods are pure virtual functions
 
@@ -10,21 +10,21 @@ class Queue
 public:
 	virtual ~Queue() {}
 	
-	// return true iff queue is empty
+	// 如果队列为空则返回true
 	virtual bool empty() const = 0;
 
-	// return number of elements in queue
+	// 返回队列中的元素个数
 	virtual int size() const = 0;
 
-	// return reference to the front element
+	// 返回队列头部的元素
 	virtual T& front() = 0;
 
-	// return reference to the back element
+	// 返回队列尾部的元素
 	virtual T& back() = 0;
 
-	// remove the front element
+	// 删除队列头部的元素（出队列）
 	virtual void pop() = 0;
 
-	// add theElement at the back of the queue
+	// 往队列尾部插入元素（入队列）
 	virtual void push(const T& element) = 0;
 };

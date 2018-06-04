@@ -1,5 +1,22 @@
 ﻿#include <iostream>
 #include <functional>
+#include <list>
+#include <array>
+#include <queue>
+#include <stack>
+#include <tuple>
+#include <hash_map>
+#include <hash_set>
+#include <set>
+#include <map>
+#include <unordered_map>
+#include <unordered_set>
+#include <string>
+#include <numeric>
+#include <exception>
+#include <random>
+#include <ctime>
+#include <utility>
 
 // 定义一个std::function类型
 typedef std::function<int(int, int)> ComputeFunction;
