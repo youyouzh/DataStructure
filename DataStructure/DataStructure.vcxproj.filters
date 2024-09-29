@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\liner_list">
+      <UniqueIdentifier>{7fa3b0ee-4e2a-4169-a3bf-5d989c2eedd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\liner_list\chain">
+      <UniqueIdentifier>{b93b8f78-45d3-4064-be5a-8de2c9e19e9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\liner_list\dictionary">
+      <UniqueIdentifier>{eac91ccf-a0fd-414e-beab-8987aa083d7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\tree">
+      <UniqueIdentifier>{d9a97e28-c970-4500-afa0-8bebff89e3a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\graph">
+      <UniqueIdentifier>{b3da7f9f-7901-43ba-914f-959b23bb9cbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\liner_list\list">
+      <UniqueIdentifier>{1134ba27-83ca-40c5-a589-bbe27c6a9957}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\liner_list\queue">
+      <UniqueIdentifier>{882ab185-812d-434d-8b47-a2b5b361143b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\liner_list\stack">
+      <UniqueIdentifier>{58887e53-d507-4016-b6ea-a9f52b5ab391}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\contract">
+      <UniqueIdentifier>{1398c6ed-a9ec-46dc-8b81-1c16e2c93581}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\tree\winner_tree">
+      <UniqueIdentifier>{783884df-a435-45ff-b93d-89b593e5c9ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\tree\binary_search_tree">
+      <UniqueIdentifier>{58237a34-99cb-48e9-9261-2fa125e46be2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\tree\base_binary_tree">
+      <UniqueIdentifier>{36362528-f6d7-480b-b166-202292b158d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\tree\balance_binary_tree">
+      <UniqueIdentifier>{edc49b58-07a5-4b76-9021-46874329ae0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\tree\heap">
+      <UniqueIdentifier>{76860f60-b7c1-4df4-943c-de318b7da85e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\graph\base">
+      <UniqueIdentifier>{5a931768-973f-457d-b836-e72d746ef704}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\graph\weighted_graph">
+      <UniqueIdentifier>{bac558fe-7193-4350-b0b2-4aae778f6c3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\graph\directed_graph">
+      <UniqueIdentifier>{2a799b9d-731f-4bf0-99e6-df58abb2ff17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\graph\weighted_directed_graph">
+      <UniqueIdentifier>{0753368f-9e28-47bf-acc2-e253c4cfef8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\graph\simple_graph">
+      <UniqueIdentifier>{e116e8dc-c896-4234-96bb-d90110ddd27a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\algorithm">
+      <UniqueIdentifier>{1879af83-9d2d-4c9a-8350-d7e427911260}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="chain.h">
+      <Filter>头文件\liner_list\chain</Filter>
+    </ClInclude>
+    <ClInclude Include="chain_node.h">
+      <Filter>头文件\liner_list\chain</Filter>
+    </ClInclude>
+    <ClInclude Include="helper.h">
+      <Filter>头文件\contract</Filter>
+    </ClInclude>
+    <ClInclude Include="extended_chain.h">
+      <Filter>头文件\liner_list\chain</Filter>
+    </ClInclude>
+    <ClInclude Include="circular_list_with_header.h">
+      <Filter>头文件\liner_list\chain</Filter>
+    </ClInclude>
+    <ClInclude Include="dictionary.h">
+      <Filter>头文件\liner_list\dictionary</Filter>
+    </ClInclude>
+    <ClInclude Include="pair.h">
+      <Filter>头文件\liner_list\dictionary</Filter>
+    </ClInclude>
+    <ClInclude Include="sorted_chain.h">
+      <Filter>头文件\liner_list\dictionary</Filter>
+    </ClInclude>
+    <ClInclude Include="u_rank.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="u_search.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="u_sort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="graph.h">
+      <Filter>头文件\graph\base</Filter>
+    </ClInclude>
+    <ClInclude Include="edge.h">
+      <Filter>头文件\graph\base</Filter>
+    </ClInclude>
+    <ClInclude Include="vertex_iterator.h">
+      <Filter>头文件\graph\base</Filter>
+    </ClInclude>
+    <ClInclude Include="array_list_with_iterator.h">
+      <Filter>头文件\liner_list\list</Filter>
+    </ClInclude>
+    <ClInclude Include="array_list.h">
+      <Filter>头文件\liner_list\list</Filter>
+    </ClInclude>
+    <ClInclude Include="array_list_stl.h">
+      <Filter>头文件\liner_list\list</Filter>
+    </ClInclude>
+    <ClInclude Include="array_queue.h">
+      <Filter>头文件\liner_list\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="array_stack.h">
+      <Filter>头文件\liner_list\stack</Filter>
+    </ClInclude>
+    <ClInclude Include="derived_array_stack.h">
+      <Filter>头文件\liner_list\stack</Filter>
+    </ClInclude>
+    <ClInclude Include="linked_stack.h">
+      <Filter>头文件\liner_list\stack</Filter>
+    </ClInclude>
+    <ClInclude Include="linked_queue.h">
+      <Filter>头文件\liner_list\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="derived_linked_stack.h">
+      <Filter>头文件\liner_list\stack</Filter>
+    </ClInclude>
+    <ClInclude Include="chian_with_iterator.h">
+      <Filter>头文件\liner_list\chain</Filter>
+    </ClInclude>
+    <ClInclude Include="vector_list.h">
+      <Filter>头文件\liner_list\list</Filter>
+    </ClInclude>
+    <ClInclude Include="extended_linear_list.h">
+      <Filter>头文件\liner_list\list</Filter>
+    </ClInclude>
+    <ClInclude Include="stack.h">
+      <Filter>头文件\liner_list\stack</Filter>
+    </ClInclude>
+    <ClInclude Include="queue.h">
+      <Filter>头文件\liner_list\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="linear_list.h">
+      <Filter>头文件\liner_list\list</Filter>
+    </ClInclude>
+    <ClInclude Include="u_exception.h">
+      <Filter>头文件\contract</Filter>
+    </ClInclude>
+    <ClInclude Include="winner_tree.h">
+      <Filter>头文件\tree\winner_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="complete_winner_tree.h">
+      <Filter>头文件\tree\winner_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="duplicate_binary_search_tree.h">
+      <Filter>头文件\tree\binary_search_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="indexed_binary_search_tree.h">
+      <Filter>头文件\tree\binary_search_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="binary_search_tree.h">
+      <Filter>头文件\tree\binary_search_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="binary_tree.h">
+      <Filter>头文件\tree\binary_search_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="binary_tree_node.h">
+      <Filter>头文件\tree\binary_search_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="linked_binary_tree.h">
+      <Filter>头文件\tree\base_binary_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="avl_tree_node.h">
+      <Filter>头文件\tree\balance_binary_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="avl_tree.h">
+      <Filter>头文件\tree\balance_binary_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="max_heap.h">
+      <Filter>头文件\tree\heap</Filter>
+    </ClInclude>
+    <ClInclude Include="max_priority_queue.h">
+      <Filter>头文件\tree\heap</Filter>
+    </ClInclude>
+    <ClInclude Include="adjacency_graph.h">
+      <Filter>头文件\graph\simple_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="array_graph.h">
+      <Filter>头文件\graph\simple_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="linked_graph.h">
+      <Filter>头文件\graph\simple_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="adjacency_weighted_graph.h">
+      <Filter>头文件\graph\weighted_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="array_weighted_graph.h">
+      <Filter>头文件\graph\weighted_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="linked_weighted_graph.h">
+      <Filter>头文件\graph\weighted_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="linked_directed_graph.h">
+      <Filter>头文件\graph\directed_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="array_directed_graph.h">
+      <Filter>头文件\graph\directed_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="adjacency_directed_graph.h">
+      <Filter>头文件\graph\directed_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="adjacency_weighted_directed_graph.h">
+      <Filter>头文件\graph\weighted_directed_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="array_weighted_directed_graph.h">
+      <Filter>头文件\graph\weighted_directed_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="linked_weighted_directed_graph.h">
+      <Filter>头文件\graph\weighted_directed_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="weighted_edge.h">
+      <Filter>头文件\graph\base</Filter>
+    </ClInclude>
+    <ClInclude Include="unweighted_edge.h">
+      <Filter>头文件\graph\base</Filter>
+    </ClInclude>
+    <ClInclude Include="knapsack_problem.h">
+      <Filter>头文件\algorithm</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\.gitignore">
+      <Filter>资源文件</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+</Project>
